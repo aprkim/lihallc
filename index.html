@@ -2,223 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liha LLC — A family company</title>
-<meta name="description" content="Liha LLC is an independent family company in California. Our first imprint, Liha Books, makes bilingual Korean–English books for children.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liha LLC — A small product studio.</title>
+<meta name="description" content="Liha LLC is a small, independent product studio. A few products, built and owned end to end.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #FAFAF7;
-    --ink: #1C2230;
-    --indigo: #1F3A5F;
-    --seal: #AE3B2C;
-    --quiet: #5A6472;
-    --hairline: #E3E2DC;
+    --paper: #FBF9F4;
+    --ink: #22303F;
+    --accent: #4E8776;
+    --accent-deep: #35604F;
+    --line: #E3DED2;
+    --muted: #6C7683;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
 
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: "IBM Plex Sans KR", -apple-system, sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
+    font-family: 'Figtree', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
-  .wrap {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* ---------- Hero ---------- */
-  header {
-    padding: 18vh 0 12vh;
-  }
-
-  .seal {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 58px;
-    height: 58px;
-    background: var(--seal);
-    color: #FBF4EE;
-    font-family: "Noto Serif KR", serif;
-    font-weight: 600;
-    font-size: 1.35rem;
-    letter-spacing: 0.05em;
-    border-radius: 3px;
-    transform: rotate(-2.5deg);
-    box-shadow: 0 1px 0 rgba(28,34,48,0.12);
-    margin-bottom: 2.4rem;
-    user-select: none;
-  }
-
-  h1 {
-    font-family: "Noto Serif KR", serif;
-    font-weight: 500;
-    font-size: clamp(2.6rem, 7vw, 3.8rem);
-    letter-spacing: -0.01em;
-    line-height: 1.15;
-  }
-
-  h1 .hangul {
-    color: var(--indigo);
-    font-weight: 400;
-    margin-left: 0.35em;
-  }
-
-  .tagline {
-    margin-top: 1.1rem;
-    font-size: 1.06rem;
-    color: var(--quiet);
-    max-width: 46ch;
-  }
-
-  /* ---------- Sections ---------- */
-  section {
-    border-top: 1px solid var(--hairline);
-    padding: 3.2rem 0;
-  }
-
-  .eyebrow {
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--indigo);
-    margin-bottom: 1.6rem;
-  }
-
-  .venture {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.4rem 0;
-  }
-
-  .venture + .venture {
-    border-top: 1px solid var(--hairline);
-  }
-
-  .venture h2 {
-    font-family: "Noto Serif KR", serif;
-    font-weight: 500;
-    font-size: 1.4rem;
-    display: flex;
-    align-items: baseline;
-    gap: 0.6em;
-  }
-
-  .venture h2 .k {
-    font-size: 1.05rem;
-    font-weight: 400;
-    color: var(--indigo);
-  }
-
-  .venture p {
-    margin-top: 0.4rem;
-    color: var(--quiet);
-    max-width: 52ch;
-  }
-
-  a.venture:hover h2 { color: var(--seal); }
-  a.venture h2 { transition: color 160ms ease; }
-
-  .soon {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--quiet);
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    padding: 0.15em 0.8em;
-    vertical-align: middle;
-  }
-
-  /* ---------- Footer ---------- */
-  footer {
-    border-top: 1px solid var(--hairline);
-    padding: 3rem 0 5rem;
-    font-size: 0.92rem;
-    color: var(--quiet);
-  }
-
-  footer a {
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--indigo);
-    padding-bottom: 1px;
-    transition: color 160ms ease, border-color 160ms ease;
-  }
-
-  footer a:hover { color: var(--seal); border-color: var(--seal); }
-
-  footer .legal { margin-top: 1.6rem; font-size: 0.82rem; }
-
-  /* ---------- Motion & focus ---------- */
-  header, section, footer {
-    animation: rise 700ms ease both;
-  }
-  section { animation-delay: 120ms; }
-  footer { animation-delay: 220ms; }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: none; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    header, section, footer { animation: none; }
-    html { scroll-behavior: auto; }
-  }
-
-  :focus-visible {
-    outline: 2px solid var(--indigo);
+  a { color: inherit; }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
     border-radius: 2px;
+  }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  .label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+  }
+
+  nav { border-bottom: 1px solid var(--line); }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .logo {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  header.hero { padding: 96px 0 88px; }
+  .eyebrow { margin-bottom: 28px; }
+  h1 {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: clamp(38px, 6.5vw, 60px);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    max-width: 18ch;
+  }
+  h1 em { font-style: normal; color: var(--accent); }
+  .hero p {
+    margin-top: 26px;
+    max-width: 50ch;
+    font-size: 19px;
+    color: var(--muted);
+  }
+
+  .principles {
+    border-top: 1px solid var(--line);
+    padding: 72px 0 80px;
+  }
+  .principles-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 56px;
+  }
+  .principle h3 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .principle p { color: var(--muted); font-size: 16px; max-width: 36ch; }
+
+  .products {
+    border-top: 1px solid var(--line);
+    padding: 72px 0 88px;
+  }
+  .status-line {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .cards { margin-top: 36px; display: grid; gap: 20px; }
+  .card {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px 30px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .badge {
+    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .badge.making { background: #EAF2EE; color: var(--accent-deep); }
+  .badge.building { background: #FBF1DE; color: #9A6A17; }
+  .card h3 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .card p { color: var(--muted); font-size: 16px; max-width: 54ch; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 56px 0 64px;
+  }
+  .foot-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .foot-brand {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .foot-brand span {
+    display: block;
+    font-family: 'Figtree';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .foot-contact a { font-size: 16px; color: var(--accent-deep); }
+  .copyright {
+    margin-top: 44px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 640px) {
+    header.hero { padding: 68px 0 60px; }
+    .principles-grid { grid-template-columns: 1fr; gap: 32px; }
+    .nav-links { gap: 18px; }
   }
 </style>
 </head>
 <body>
 
-<div class="wrap">
-
-  <header>
-    <div class="seal" aria-hidden="true">리하</div>
-    <h1>Liha<span class="hangul">리하</span></h1>
-    <p class="tagline">A family company in California. We build small, careful things — starting with books that let children grow up in two languages at once.</p>
-  </header>
-
-  <section>
-    <div class="eyebrow">What we make</div>
-
-    <a class="venture" href="#" aria-label="Liha Books">
-      <h2>Liha Books <span class="k">리하 북스</span></h2>
-      <p>Bilingual Korean–English picture books and learning materials for children — written so neither language feels like a translation of the other.</p>
-    </a>
-
-    <div class="venture">
-      <h2>What's next <span class="soon">In the works</span></h2>
-      <p>Liha is built as a home for more than one idea. New ventures will appear here as they're ready.</p>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#">Liha LLC</a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <footer>
-    <p>Reach us at <a href="mailto:hello@lihallc.com">hello@lihallc.com</a></p>
-    <p class="legal">© 2026 Liha LLC · California</p>
-  </footer>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="label">Liha LLC · An independent product studio</span></div>
+    <h1>A small studio, building <em>a few good products.</em></h1>
+    <p>Liha LLC is an independent, founder-run studio. Each product has its own name and its own home — this is the company behind them.</p>
+  </div>
+</header>
 
-</div>
+<section class="principles">
+  <div class="wrap">
+    <span class="label">How we work</span>
+    <div class="principles-grid">
+      <div class="principle">
+        <h3>Few things, made well</h3>
+        <p>We'd rather finish one good product than announce five.</p>
+      </div>
+      <div class="principle">
+        <h3>Owned end to end</h3>
+        <p>We design, build, and run everything we ship — no outsourced core, no rented identity.</p>
+      </div>
+      <div class="principle">
+        <h3>Small on purpose</h3>
+        <p>Independent and self-funded. We grow when a product earns it, not before.</p>
+      </div>
+      <div class="principle">
+        <h3>Built to last</h3>
+        <p>Products people keep using quietly beat products people talk about once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="wrap">
+    <span class="label">Products</span>
+    <div class="status-line">In the works · more coming</div>
+    <div class="cards">
+      <div class="card">
+        <span class="badge making">In the making</span>
+        <h3>Liha Books</h3>
+        <p>Children's picture books, starting with bilingual Korean–English titles written so each language stands on its own.</p>
+      </div>
+      <div class="card">
+        <span class="badge building">In development</span>
+        <h3>A card-based learning app</h3>
+        <p>A simple app for playful, everyday learning. Name and details coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">Liha LLC<span>An independent product studio.</span></div>
+      <div class="foot-contact">
+        <span class="label">Contact</span><br>
+        <a href="mailto:hello@lihallc.com">hello@lihallc.com</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Liha LLC</div>
+  </div>
+</footer>
 
 </body>
 </html>
