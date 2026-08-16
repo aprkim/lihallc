@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liha LLC — A family company</title>
+<meta name="description" content="Liha LLC is an independent family company in California. Our first imprint, Liha Books, makes bilingual Korean–English books for children.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAFAF7;
+    --ink: #1C2230;
+    --indigo: #1F3A5F;
+    --seal: #AE3B2C;
+    --quiet: #5A6472;
+    --hairline: #E3E2DC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans KR", -apple-system, sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Hero ---------- */
+  header {
+    padding: 18vh 0 12vh;
+  }
+
+  .seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    background: var(--seal);
+    color: #FBF4EE;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    transform: rotate(-2.5deg);
+    box-shadow: 0 1px 0 rgba(28,34,48,0.12);
+    margin-bottom: 2.4rem;
+    user-select: none;
+  }
+
+  h1 {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 500;
+    font-size: clamp(2.6rem, 7vw, 3.8rem);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  h1 .hangul {
+    color: var(--indigo);
+    font-weight: 400;
+    margin-left: 0.35em;
+  }
+
+  .tagline {
+    margin-top: 1.1rem;
+    font-size: 1.06rem;
+    color: var(--quiet);
+    max-width: 46ch;
+  }
+
+  /* ---------- Sections ---------- */
+  section {
+    border-top: 1px solid var(--hairline);
+    padding: 3.2rem 0;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--indigo);
+    margin-bottom: 1.6rem;
+  }
+
+  .venture {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.4rem 0;
+  }
+
+  .venture + .venture {
+    border-top: 1px solid var(--hairline);
+  }
+
+  .venture h2 {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+  }
+
+  .venture h2 .k {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--indigo);
+  }
+
+  .venture p {
+    margin-top: 0.4rem;
+    color: var(--quiet);
+    max-width: 52ch;
+  }
+
+  a.venture:hover h2 { color: var(--seal); }
+  a.venture h2 { transition: color 160ms ease; }
+
+  .soon {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--quiet);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    padding: 0.15em 0.8em;
+    vertical-align: middle;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 3rem 0 5rem;
+    font-size: 0.92rem;
+    color: var(--quiet);
+  }
+
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--indigo);
+    padding-bottom: 1px;
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+
+  footer a:hover { color: var(--seal); border-color: var(--seal); }
+
+  footer .legal { margin-top: 1.6rem; font-size: 0.82rem; }
+
+  /* ---------- Motion & focus ---------- */
+  header, section, footer {
+    animation: rise 700ms ease both;
+  }
+  section { animation-delay: 120ms; }
+  footer { animation-delay: 220ms; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    header, section, footer { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--indigo);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="seal" aria-hidden="true">리하</div>
+    <h1>Liha<span class="hangul">리하</span></h1>
+    <p class="tagline">A family company in California. We build small, careful things — starting with books that let children grow up in two languages at once.</p>
+  </header>
+
+  <section>
+    <div class="eyebrow">What we make</div>
+
+    <a class="venture" href="#" aria-label="Liha Books">
+      <h2>Liha Books <span class="k">리하 북스</span></h2>
+      <p>Bilingual Korean–English picture books and learning materials for children — written so neither language feels like a translation of the other.</p>
+    </a>
+
+    <div class="venture">
+      <h2>What's next <span class="soon">In the works</span></h2>
+      <p>Liha is built as a home for more than one idea. New ventures will appear here as they're ready.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Reach us at <a href="mailto:hello@lihallc.com">hello@lihallc.com</a></p>
+    <p class="legal">© 2026 Liha LLC · Kensington, California</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
