@@ -258,6 +258,18 @@
     header.hero { padding: 68px 0 56px; }
     .cards, .dots { grid-template-columns: 1fr; }
     .nav-links { gap: 18px; }
+    section { padding: 56px 0 60px; }
+    .rules { padding: 4px 22px; }
+    .favicon-card { padding: 24px 22px; }
+  }
+
+  /* touch devices — comfortable tap targets */
+  @media (pointer: coarse) {
+    .nav-inner { padding-top: 12px; padding-bottom: 12px; }
+    .logo,
+    .nav-links a,
+    .card .caption a,
+    .favicon-card a { display: inline-flex; align-items: center; min-height: 44px; }
   }
 </style>
 </head>

@@ -240,6 +240,15 @@
     .footer-contact { justify-self: start; text-align: left; }
     .footer-bottom { flex-direction: column; gap: 8px; align-items: flex-start; }
   }
+  /* touch devices — comfortable tap targets */
+  @media (pointer: coarse) {
+    header.top { padding-top: 14px; padding-bottom: 14px; }
+    .logo,
+    nav.links a,
+    .footer-contact .email { display: inline-flex; align-items: center; min-height: 44px; }
+    .footer-contact .label { font-size: 12px; }
+  }
+
   @media (max-width: 540px) {
     header.top { padding: 16px 16px; }
     .hero { padding: 56px 16px 40px; }

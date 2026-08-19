@@ -204,6 +204,16 @@
     header.hero { padding: 68px 0 60px; }
     .principles-grid { grid-template-columns: 1fr; gap: 32px; }
     .nav-links { gap: 18px; }
+    .card { padding: 26px 22px 24px; }
+    footer { padding: 44px 0 40px; }
+  }
+
+  /* touch devices — comfortable tap targets */
+  @media (pointer: coarse) {
+    .nav-inner { padding-top: 12px; padding-bottom: 12px; }
+    .logo,
+    .nav-links a,
+    .foot-contact a { display: inline-flex; align-items: center; min-height: 44px; }
   }
 </style>
 </head>
