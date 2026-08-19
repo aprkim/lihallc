@@ -152,6 +152,15 @@
     font-size: 22px;
     font-weight: 600;
     letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .product-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex: none;
   }
   .card p { color: var(--muted); font-size: 16px; max-width: 54ch; }
 
@@ -261,17 +270,17 @@
     <div class="status-line">In the works · more coming</div>
     <div class="cards">
       <a class="card" href="http://books.lihallc.com/" target="_blank" rel="noopener">
-        <h3>Liha Books</h3>
+        <h3><span class="product-dot" style="background:#E9B412" aria-hidden="true"></span>Liha Books</h3>
         <p>Children's picture books, starting with bilingual Korean–English titles written so each language stands on its own.</p>
         <span class="domain">books.lihallc.com</span>
       </a>
       <a class="card" href="https://kept.cards/" target="_blank" rel="noopener">
-        <h3>Kept Cards</h3>
+        <h3><span class="product-dot" style="background:#4C6FD9" aria-hidden="true"></span>Kept Cards</h3>
         <p>Snap a photo of every greeting card you want to keep. Kept Cards saves the card, who sent it, and the occasion — so handwritten notes from the people you love never get lost.</p>
         <span class="domain">kept.cards</span>
       </a>
       <a class="card" href="https://mentorbench.site/" target="_blank" rel="noopener">
-        <h3>MentorBench</h3>
+        <h3><span class="product-dot" style="background:#2E9E8F" aria-hidden="true"></span>MentorBench</h3>
         <p>1:1 video mentorship for the biosciences. Early-career scientists get real time with mentors who've been there — and mentors give back on their own terms, without the busywork.</p>
         <span class="domain">mentorbench.site</span>
       </a>
