@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liha — Made on purpose</title>
-<meta name="description" content="Liha LLC is a small, independent product studio. A few products, built and owned end to end.">
+<meta name="description" content="Liha is an independent product studio. A few products, built and owned end to end.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,19 +126,28 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
   }
-  .badge {
-    align-self: flex-start;
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(31, 27, 22, 0.26);
+    box-shadow: 0 6px 20px rgba(31, 27, 22, 0.06);
+  }
+  .card:focus-visible {
+    outline: 2px solid var(--liha-ink);
+    outline-offset: 3px;
+  }
+  .domain {
+    margin-top: 6px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: rgba(31, 27, 22, 0.06);
+    letter-spacing: 0.06em;
     color: var(--muted);
   }
+  .card:hover .domain { color: var(--liha-ink); }
   .card h3 {
     font-size: 22px;
     font-weight: 600;
@@ -217,7 +226,7 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow"><span class="label">Liha · An independent product studio</span></div>
-    <h1>A small studio, building a few good products.</h1>
+    <h1>An independent studio, building a few good products.</h1>
     <p>Liha LLC is an independent, founder-run studio. Each product has its own name and its own home — this is the company behind them.</p>
   </div>
 </header>
@@ -235,7 +244,7 @@
         <p>We design, build, and run everything we ship — no outsourced core, no rented identity.</p>
       </div>
       <div class="principle">
-        <h3>Small on purpose</h3>
+        <h3>Independent on purpose</h3>
         <p>Independent and self-funded. We grow when a product earns it, not before.</p>
       </div>
       <div class="principle">
@@ -251,21 +260,21 @@
     <span class="label">Products</span>
     <div class="status-line">In the works · more coming</div>
     <div class="cards">
-      <div class="card">
-        <span class="badge">In the making</span>
+      <a class="card" href="http://books.lihallc.com/" target="_blank" rel="noopener">
         <h3>Liha Books</h3>
         <p>Children's picture books, starting with bilingual Korean–English titles written so each language stands on its own.</p>
-      </div>
-      <div class="card">
-        <span class="badge">In development</span>
+        <span class="domain">books.lihallc.com</span>
+      </a>
+      <a class="card" href="https://kept.cards/" target="_blank" rel="noopener">
         <h3>Kept Cards</h3>
         <p>Snap a photo of every greeting card you want to keep. Kept Cards saves the card, who sent it, and the occasion — so handwritten notes from the people you love never get lost.</p>
-      </div>
-      <div class="card">
-        <span class="badge">In beta</span>
+        <span class="domain">kept.cards</span>
+      </a>
+      <a class="card" href="https://mentorbench.site/" target="_blank" rel="noopener">
         <h3>MentorBench</h3>
         <p>1:1 video mentorship for the biosciences. Early-career scientists get real time with mentors who've been there — and mentors give back on their own terms, without the busywork.</p>
-      </div>
+        <span class="domain">mentorbench.site</span>
+      </a>
     </div>
   </div>
 </section>
