@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liha — Made on purpose</title>
-<meta name="description" content="Liha LLC is a small, independent product studio. A few products, built and owned end to end.">
+<meta name="description" content="Liha is an independent product studio. A few products, built and owned end to end.">
 <style>
   /* Palette + type benchmarked from makedo.com (styles2.css) */
   :root {
@@ -141,17 +141,29 @@
     gap: 64px;
   }
   .product {
+    display: block;
     padding-top: 48px;
     border-top: 1px solid var(--line);
+    color: inherit;
+    transition: border-color 160ms ease;
   }
-  .product-tag {
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    text-transform: uppercase;
+  .product:hover { border-color: var(--line-strong); }
+  .product:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
+  .product-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     margin-bottom: 18px;
   }
+  .domain {
+    display: block;
+    margin-top: 18px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .product:hover .domain { color: var(--fg); }
   .product h3 {
     font-size: clamp(36px, 5vw, 56px);
     font-weight: 500;
@@ -253,7 +265,7 @@
 
 <section class="hero">
   <div class="eyebrow">Liha · An independent product studio</div>
-  <h1>A small studio, building <em>a few good products.</em></h1>
+  <h1>An independent studio, building <em>a few good products.</em></h1>
   <p>Liha LLC is an independent, founder-run studio. Each product has its own name and its own home — <span class="strong">this is the company behind them.</span></p>
 </section>
 
@@ -269,7 +281,7 @@
       <p>We design, build, and run everything we ship — no outsourced core, no rented identity.</p>
     </div>
     <div class="principle">
-      <h3>Small on purpose</h3>
+      <h3>Independent on purpose</h3>
       <p>Independent and self-funded. We grow when a product earns it, not before.</p>
     </div>
     <div class="principle">
@@ -285,21 +297,24 @@
     <p class="mono meta">In the works · more coming</p>
   </div>
   <div class="products-grid">
-    <article class="product">
-      <div class="product-tag">In the making</div>
+    <a class="product" href="https://books.lihallc.com/" target="_blank" rel="noopener">
+      <div class="product-dot" style="background:#E9B412" aria-hidden="true"></div>
       <h3>Liha Books</h3>
       <p>Children's picture books, starting with bilingual Korean–English titles written so each language stands on its own.</p>
-    </article>
-    <article class="product">
-      <div class="product-tag">In development</div>
+      <span class="domain">books.lihallc.com</span>
+    </a>
+    <a class="product" href="https://kept.cards/" target="_blank" rel="noopener">
+      <div class="product-dot" style="background:#4C6FD9" aria-hidden="true"></div>
       <h3>Kept Cards</h3>
       <p>Snap a photo of every greeting card you want to keep. Kept Cards saves the card, who sent it, and the occasion — so handwritten notes from the people you love never get lost.</p>
-    </article>
-    <article class="product">
-      <div class="product-tag">In beta</div>
+      <span class="domain">kept.cards</span>
+    </a>
+    <a class="product" href="https://mentorbench.site/" target="_blank" rel="noopener">
+      <div class="product-dot" style="background:#2E9E8F" aria-hidden="true"></div>
       <h3>MentorBench</h3>
       <p>1:1 video mentorship for the biosciences. Early-career scientists get real time with mentors who've been there — and mentors give back on their own terms, without the busywork.</p>
-    </article>
+      <span class="domain">mentorbench.site</span>
+    </a>
   </div>
 </section>
 
