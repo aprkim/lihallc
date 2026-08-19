@@ -16,6 +16,7 @@
     --liha-dot:  #E85D8A;   /* studio pink */
     --dot-books: #E9B412;   /* liha books — yellow */
     --dot-cards: #4C6FD9;   /* kept cards — ink blue */
+    --dot-bench: #2E9E8F;   /* mentorbench — teal */
     --line: #E4E0D9;
     --muted: #746E65;
   }
@@ -156,7 +157,7 @@
   .dots {
     margin-top: 36px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
   .dot-card {
@@ -247,6 +248,10 @@
     font-size: 13px;
     color: rgba(244, 242, 239, 0.6);
     letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 780px) {
+    .dots { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 640px) {
@@ -378,6 +383,11 @@
         <div class="dot" style="background:#4C6FD9"></div>
         <span class="name">kept cards</span>
         <span class="hex">#4C6FD9</span>
+      </div>
+      <div class="dot-card">
+        <div class="dot" style="background:#2E9E8F"></div>
+        <span class="name">mentorbench</span>
+        <span class="hex">#2E9E8F</span>
       </div>
     </div>
     <p class="note">More join as products ship.</p>
