@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liha — Made on purpose</title>
 <meta name="description" content="Liha LLC is a small, independent product studio. A few products, built and owned end to end.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #F5F5F4;
-    --ink: #22303F;
-    --accent: #4E8776;
-    --accent-deep: #35604F;
-    --line: #E3DED2;
-    --muted: #6C7683;
+    --liha-ink:  #1F1B16;   /* warm black */
+    --liha-gray: #F4F2EF;   /* warm gray */
+    --liha-dot:  #E85D8A;   /* studio pink */
+    --line: #E4E0D9;
+    --muted: #746E65;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,9 +27,9 @@
   }
 
   body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Figtree', system-ui, sans-serif;
+    background: var(--liha-gray);
+    color: var(--liha-ink);
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 17px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -37,7 +37,7 @@
 
   a { color: inherit; }
   a:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--liha-dot);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -46,11 +46,12 @@
 
   .label {
     display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--accent-deep);
+    color: var(--liha-dot);
   }
 
   nav { border-bottom: 1px solid var(--line); }
@@ -61,12 +62,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .logo {
-    font-family: 'Gowun Batang', serif;
-    font-weight: 700;
-    font-size: 22px;
-    text-decoration: none;
-  }
+  .logo { display: inline-flex; align-items: center; }
+  .logo svg { height: 26px; width: auto; display: block; }
   .nav-links { display: flex; gap: 28px; }
   .nav-links a {
     text-decoration: none;
@@ -74,19 +71,17 @@
     font-weight: 500;
     color: var(--muted);
   }
-  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover { color: var(--liha-ink); }
 
   header.hero { padding: 96px 0 88px; }
   .eyebrow { margin-bottom: 28px; }
   h1 {
-    font-family: 'Gowun Batang', serif;
-    font-weight: 700;
     font-size: clamp(38px, 6.5vw, 60px);
+    font-weight: 700;
     line-height: 1.18;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     max-width: 18ch;
   }
-  h1 em { font-style: normal; color: var(--accent); }
   .hero p {
     margin-top: 26px;
     max-width: 50ch;
@@ -94,10 +89,11 @@
     color: var(--muted);
   }
 
-  .principles {
+  section {
     border-top: 1px solid var(--line);
     padding: 72px 0 80px;
   }
+
   .principles-grid {
     margin-top: 40px;
     display: grid;
@@ -105,21 +101,18 @@
     gap: 40px 56px;
   }
   .principle h3 {
-    font-family: 'Gowun Batang', serif;
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     margin-bottom: 8px;
   }
   .principle p { color: var(--muted); font-size: 16px; max-width: 36ch; }
 
-  .products {
-    border-top: 1px solid var(--line);
-    padding: 72px 0 88px;
-  }
   .status-line {
     margin-top: 10px;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -136,25 +129,27 @@
   }
   .badge {
     align-self: flex-start;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 999px;
+    background: rgba(31, 27, 22, 0.06);
+    color: var(--muted);
   }
-  .badge.making { background: #EAF2EE; color: var(--accent-deep); }
-  .badge.building { background: #FBF1DE; color: #9A6A17; }
   .card h3 {
-    font-family: 'Gowun Batang', serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
   .card p { color: var(--muted); font-size: 16px; max-width: 54ch; }
 
   footer {
-    border-top: 1px solid var(--line);
-    padding: 56px 0 64px;
+    background: var(--liha-ink);
+    color: var(--liha-gray);
+    padding: 56px 0 48px;
   }
   .foot-grid {
     display: flex;
@@ -162,24 +157,28 @@
     gap: 32px;
     flex-wrap: wrap;
   }
-  .foot-brand {
-    font-family: 'Gowun Batang', serif;
-    font-weight: 700;
-    font-size: 20px;
-  }
+  footer .foot-brand svg { height: 24px; width: auto; display: block; }
   .foot-brand span {
     display: block;
-    font-family: 'Figtree';
-    font-weight: 400;
     font-size: 15px;
-    color: var(--muted);
-    margin-top: 4px;
+    color: rgba(244, 242, 239, 0.62);
+    margin-top: 12px;
   }
-  .foot-contact a { font-size: 16px; color: var(--accent-deep); }
+  .foot-contact .label { color: var(--liha-dot); }
+  .foot-contact a {
+    font-size: 16px;
+    color: var(--liha-dot);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .foot-contact a:hover { color: var(--liha-gray); }
   .copyright {
     margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(244, 242, 239, 0.14);
     font-size: 13px;
-    color: var(--muted);
+    color: rgba(244, 242, 239, 0.6);
     letter-spacing: 0.04em;
   }
 
@@ -194,7 +193,19 @@
 
 <nav>
   <div class="wrap nav-inner">
-    <a class="logo" href="#">Liha LLC</a>
+    <a class="logo" href="/" aria-label="Liha home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha">
+        <g fill="none" stroke="#1F1B16" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 55 L20 185"/>
+          <path d="M75 115 L75 185"/>
+          <path d="M130 55 L130 185"/>
+          <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+          <circle cx="290" cy="150" r="35"/>
+          <path d="M325 115 L325 185"/>
+        </g>
+        <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+      </svg>
+    </a>
     <div class="nav-links">
       <a href="#products">Products</a>
       <a href="/brand">Brand</a>
@@ -206,7 +217,7 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow"><span class="label">Liha LLC · An independent product studio</span></div>
-    <h1>A small studio, building <em>a few good products.</em></h1>
+    <h1>A small studio, building a few good products.</h1>
     <p>Liha LLC is an independent, founder-run studio. Each product has its own name and its own home — this is the company behind them.</p>
   </div>
 </header>
@@ -241,12 +252,12 @@
     <div class="status-line">In the works · more coming</div>
     <div class="cards">
       <div class="card">
-        <span class="badge making">In the making</span>
+        <span class="badge">In the making</span>
         <h3>Liha Books</h3>
         <p>Children's picture books, starting with bilingual Korean–English titles written so each language stands on its own.</p>
       </div>
       <div class="card">
-        <span class="badge building">In development</span>
+        <span class="badge">In development</span>
         <h3>Tiny Cards</h3>
         <p>Snap a photo of every greeting card you want to keep. Tiny Cards saves the card, who sent it, and the occasion — so handwritten notes from the people you love never get lost.</p>
       </div>
@@ -257,7 +268,20 @@
 <footer id="contact">
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-brand">Liha LLC<span>An independent product studio.</span></div>
+      <div class="foot-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha">
+          <g fill="none" stroke="#F4F2EF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 55 L20 185"/>
+            <path d="M75 115 L75 185"/>
+            <path d="M130 55 L130 185"/>
+            <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+            <circle cx="290" cy="150" r="35"/>
+            <path d="M325 115 L325 185"/>
+          </g>
+          <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+        </svg>
+        <span>An independent product studio.</span>
+      </div>
       <div class="foot-contact">
         <span class="label">Contact</span><br>
         <a href="mailto:hello@lihallc.com">hello@lihallc.com</a>
