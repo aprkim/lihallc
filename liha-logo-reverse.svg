@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha">
+  <g fill="none" stroke="#F4F2EF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 55 L20 185"/>
+    <path d="M75 115 L75 185"/>
+    <path d="M130 55 L130 185"/>
+    <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+    <circle cx="290" cy="150" r="35"/>
+    <path d="M325 115 L325 185"/>
+  </g>
+  <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+</svg>

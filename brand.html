@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liha — Brand</title>
+<meta name="description" content="The Liha wordmark, colors, and rules behind everything we make.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --liha-ink:  #1F1B16;   /* warm black */
+    --liha-gray: #F4F2EF;   /* warm gray */
+    --liha-dot:  #E85D8A;   /* studio pink */
+    --dot-books: #E9B412;   /* liha books — yellow */
+    --dot-cards: #4C6FD9;   /* tiny cards — ink blue */
+    --line: #E4E0D9;
+    --muted: #746E65;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    background: var(--liha-gray);
+    color: var(--liha-ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+  a:focus-visible {
+    outline: 2px solid var(--liha-dot);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  .label {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--liha-dot);
+  }
+
+  nav { border-bottom: 1px solid var(--line); }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .logo { display: inline-flex; align-items: center; }
+  .logo svg { height: 26px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .nav-links a:hover { color: var(--liha-ink); }
+  .nav-links a[aria-current="page"] { color: var(--liha-ink); }
+
+  header.hero { padding: 96px 0 72px; }
+  .eyebrow { margin-bottom: 28px; }
+  h1 {
+    font-size: clamp(38px, 6.5vw, 60px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+  .hero p {
+    margin-top: 26px;
+    max-width: 50ch;
+    font-size: 19px;
+    color: var(--muted);
+  }
+
+  section {
+    border-top: 1px solid var(--line);
+    padding: 72px 0 80px;
+  }
+  section > .wrap > p.note {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 60ch;
+  }
+
+  h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+
+  .cards {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .card {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .card .caption {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 22px 18px;
+  }
+  .card .caption .name { font-size: 15px; font-weight: 600; }
+  .card .caption a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--liha-dot);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .card .caption a:hover { color: var(--liha-ink); }
+
+  .specimen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 44px 24px;
+  }
+  .specimen svg { width: min(200px, 60%); height: auto; }
+  .specimen.on-gray { background: var(--liha-gray); border-bottom: 1px solid var(--line); }
+  .specimen.on-ink { background: var(--liha-ink); }
+
+  .swatch { height: 150px; }
+  .swatch.ink { background: var(--liha-ink); }
+  .swatch.gray { background: var(--liha-gray); border-bottom: 1px solid var(--line); }
+  .hex {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .dots {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .dot-card {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px 22px 26px;
+    text-align: center;
+  }
+  .dot-card .dot {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+  }
+  .dot-card .name { font-size: 15px; font-weight: 600; }
+  .dot-card .hex { display: block; margin-top: 4px; }
+
+  .rules {
+    margin-top: 36px;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px 30px;
+  }
+  .rules li {
+    list-style: none;
+    padding: 18px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    font-size: 16px;
+  }
+  .rules li + li { border-top: 1px solid var(--line); }
+  .rules .case {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    white-space: nowrap;
+    min-width: 9ch;
+  }
+  .rules .when { color: var(--muted); }
+
+  .favicon-card {
+    margin-top: 36px;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 460px;
+  }
+  .favicon-sizes { display: flex; align-items: flex-end; gap: 24px; }
+  .favicon-sizes figure { text-align: center; }
+  .favicon-sizes img { display: block; margin: 0 auto 8px; }
+  .favicon-sizes figcaption {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .favicon-card a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--liha-dot);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .favicon-card a:hover { color: var(--liha-ink); }
+
+  footer {
+    background: var(--liha-ink);
+    color: var(--liha-gray);
+    padding: 48px 0 52px;
+  }
+  .foot-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  footer svg { height: 24px; width: auto; display: block; }
+  .copyright {
+    font-size: 13px;
+    color: rgba(244, 242, 239, 0.6);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 640px) {
+    header.hero { padding: 68px 0 56px; }
+    .cards, .dots { grid-template-columns: 1fr; }
+    .nav-links { gap: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="/" aria-label="Liha home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha">
+        <g fill="none" stroke="#1F1B16" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 55 L20 185"/>
+          <path d="M75 115 L75 185"/>
+          <path d="M130 55 L130 185"/>
+          <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+          <circle cx="290" cy="150" r="35"/>
+          <path d="M325 115 L325 185"/>
+        </g>
+        <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Products</a>
+      <a href="/brand" aria-current="page">Brand</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="label">Brand</span></div>
+    <h1>How liha looks.</h1>
+    <p>The wordmark, colors, and rules behind everything we make.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Wordmark</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="specimen on-gray">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha wordmark, primary">
+            <g fill="none" stroke="#1F1B16" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 55 L20 185"/>
+              <path d="M75 115 L75 185"/>
+              <path d="M130 55 L130 185"/>
+              <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+              <circle cx="290" cy="150" r="35"/>
+              <path d="M325 115 L325 185"/>
+            </g>
+            <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+          </svg>
+        </div>
+        <div class="caption">
+          <span class="name">Primary</span>
+          <a href="liha-logo.svg" download>Download SVG</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="specimen on-ink">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha wordmark, reverse">
+            <g fill="none" stroke="#F4F2EF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 55 L20 185"/>
+              <path d="M75 115 L75 185"/>
+              <path d="M130 55 L130 185"/>
+              <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+              <circle cx="290" cy="150" r="35"/>
+              <path d="M325 115 L325 185"/>
+            </g>
+            <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+          </svg>
+        </div>
+        <div class="caption">
+          <span class="name">Reverse</span>
+          <a href="liha-logo-reverse.svg" download>Download SVG</a>
+        </div>
+      </div>
+    </div>
+    <p class="note">The wordmark is always lowercase. Minimum height 24px. Don't recolor the letterforms, stretch it, or add effects.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Color</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="swatch ink"></div>
+        <div class="caption">
+          <span class="name">Ink</span>
+          <span class="hex">#1F1B16</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="swatch gray"></div>
+        <div class="caption">
+          <span class="name">Warm gray</span>
+          <span class="hex">#F4F2EF</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">Everything is ink on warm gray. Color appears in exactly one place: the dot.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The dot</h2>
+    <p class="note">The dot over the i is the one variable in the identity. By default it's studio pink. Each product line carries its own dot color in its own context.</p>
+    <div class="dots">
+      <div class="dot-card">
+        <div class="dot" style="background:#E85D8A"></div>
+        <span class="name">liha — studio</span>
+        <span class="hex">#E85D8A</span>
+      </div>
+      <div class="dot-card">
+        <div class="dot" style="background:#E9B412"></div>
+        <span class="name">liha books</span>
+        <span class="hex">#E9B412</span>
+      </div>
+      <div class="dot-card">
+        <div class="dot" style="background:#4C6FD9"></div>
+        <span class="name">tiny cards</span>
+        <span class="hex">#4C6FD9</span>
+      </div>
+    </div>
+    <p class="note">More join as products ship.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Casing</h2>
+    <ul class="rules">
+      <li><span class="case">liha</span><span class="when">Lowercase in the wordmark, always.</span></li>
+      <li><span class="case">Liha</span><span class="when">Title case in writing.</span></li>
+      <li><span class="case">Liha LLC</span><span class="when">Only in legal lines.</span></li>
+      <li><span class="case">LIHA</span><span class="when">Never. No all-caps, anywhere.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Favicon</h2>
+    <div class="favicon-card">
+      <div class="favicon-sizes">
+        <figure>
+          <img src="favicon.svg" width="32" height="32" alt="Liha favicon at 32 pixels">
+          <figcaption>32px</figcaption>
+        </figure>
+        <figure>
+          <img src="favicon.svg" width="16" height="16" alt="Liha favicon at 16 pixels">
+          <figcaption>16px</figcaption>
+        </figure>
+      </div>
+      <a href="favicon.svg" download>Download SVG</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha">
+      <g fill="none" stroke="#F4F2EF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 55 L20 185"/>
+        <path d="M75 115 L75 185"/>
+        <path d="M130 55 L130 185"/>
+        <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+        <circle cx="290" cy="150" r="35"/>
+        <path d="M325 115 L325 185"/>
+      </g>
+      <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+    </svg>
+    <span class="copyright">© 2026 Liha LLC</span>
+  </div>
+</footer>
+
+</body>
+</html>
