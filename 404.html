@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-STR03MW9GG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-STR03MW9GG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Liha</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --liha-ink:  #1F1B16;   /* warm black */
+    --liha-gray: #F4F2EF;   /* warm gray */
+    --liha-dot:  #E85D8A;   /* studio pink */
+    --line: #E4E0D9;
+    --muted: #746E65;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--liha-gray);
+    color: var(--liha-ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  main { max-width: 480px; }
+
+  .logo { display: inline-flex; align-items: center; margin-bottom: 44px; }
+  .logo svg { height: 26px; width: auto; display: block; }
+
+  .label {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--liha-dot);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(30px, 6vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin-top: 18px;
+    font-size: 18px;
+    color: var(--muted);
+  }
+
+  .back {
+    display: inline-block;
+    margin-top: 34px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--liha-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--liha-ink);
+    padding-bottom: 2px;
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+  .back:hover { color: var(--liha-dot); border-color: var(--liha-dot); }
+  .back:focus-visible {
+    outline: 2px solid var(--liha-ink);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .back { transition: none; }
+  }
+
+  /* touch devices — comfortable tap targets */
+  @media (pointer: coarse) {
+    .logo, .back { display: inline-flex; align-items: center; min-height: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <a class="logo" href="/" aria-label="Liha home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 26 353 188" role="img" aria-label="liha">
+      <g fill="none" stroke="#1F1B16" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 55 L20 185"/>
+        <path d="M75 115 L75 185"/>
+        <path d="M130 55 L130 185"/>
+        <path d="M130 150 C130 128 145 115 165 115 C185 115 200 128 200 150 L200 185"/>
+        <circle cx="290" cy="150" r="35"/>
+        <path d="M325 115 L325 185"/>
+      </g>
+      <circle cx="75" cy="57" r="17" fill="#E85D8A"/>
+    </svg>
+  </a>
+
+  <div><span class="label">404</span></div>
+  <h1>Page not found.</h1>
+  <p>That page doesn't exist, or it moved somewhere else.</p>
+
+  <a class="back" href="/">Back to Liha</a>
+</main>
+
+</body>
+</html>
