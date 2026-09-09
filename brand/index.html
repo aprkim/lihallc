@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-STR03MW9GG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-STR03MW9GG');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liha — Brand</title>
 <meta name="description" content="The Liha wordmark, colors, and rules behind everything we make.">
@@ -14,6 +21,7 @@
     --liha-ink:  #1F1B16;   /* warm black */
     --liha-gray: #F4F2EF;   /* warm gray */
     --liha-dot:  #E85D8A;   /* studio pink */
+    --dot-tabbi: #BF3143;   /* tabbi ai — crimson */
     --dot-books: #E9B412;   /* liha books — yellow */
     --dot-cards: #4C6FD9;   /* kept cards — ink blue */
     --dot-bench: #2E9E8F;   /* mentorbench — teal */
@@ -157,14 +165,14 @@
   .dots {
     margin-top: 36px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
   }
   .dot-card {
     border: 1px solid var(--line);
     background: #fff;
     border-radius: 14px;
-    padding: 30px 22px 26px;
+    padding: 30px 16px 26px;
     text-align: center;
   }
   .dot-card .dot {
@@ -251,12 +259,13 @@
   }
 
   @media (max-width: 780px) {
-    .dots { grid-template-columns: repeat(2, 1fr); }
+    .dots { grid-template-columns: repeat(3, 1fr); }
   }
 
   @media (max-width: 640px) {
     header.hero { padding: 68px 0 56px; }
-    .cards, .dots { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr; }
+    .dots { grid-template-columns: repeat(2, 1fr); }
     .nav-links { gap: 18px; }
     section { padding: 56px 0 60px; }
     .rules { padding: 4px 22px; }
@@ -382,22 +391,27 @@
     <p class="note">The dot over the i is the one variable in the identity. By default it's studio pink. Each product line carries its own dot color in its own context.</p>
     <div class="dots">
       <div class="dot-card">
-        <div class="dot" style="background:#E85D8A"></div>
+        <div class="dot" style="background:var(--liha-dot)"></div>
         <span class="name">liha — studio</span>
         <span class="hex">#E85D8A</span>
       </div>
       <div class="dot-card">
-        <div class="dot" style="background:#E9B412"></div>
+        <div class="dot" style="background:var(--dot-tabbi)"></div>
+        <span class="name">tabbi ai</span>
+        <span class="hex">#BF3143</span>
+      </div>
+      <div class="dot-card">
+        <div class="dot" style="background:var(--dot-books)"></div>
         <span class="name">liha books</span>
         <span class="hex">#E9B412</span>
       </div>
       <div class="dot-card">
-        <div class="dot" style="background:#4C6FD9"></div>
+        <div class="dot" style="background:var(--dot-cards)"></div>
         <span class="name">kept cards</span>
         <span class="hex">#4C6FD9</span>
       </div>
       <div class="dot-card">
-        <div class="dot" style="background:#2E9E8F"></div>
+        <div class="dot" style="background:var(--dot-bench)"></div>
         <span class="name">mentorbench</span>
         <span class="hex">#2E9E8F</span>
       </div>
