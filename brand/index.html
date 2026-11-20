@@ -23,6 +23,7 @@
     --liha-dot:  #E85D8A;   /* studio pink */
     --dot-tabbi: #BF3143;   /* tabbi ai — crimson */
     --dot-books: #E9B412;   /* liha books — yellow */
+    --dot-sori:  #F29E6D;   /* sori blocks — orange */
     --dot-puddle: #2A74A8;  /* puddle — water blue */
     --dot-cards: #4C6FD9;   /* kept cards — ink blue */
     --dot-bench: #2E9E8F;   /* mentorbench — teal */
@@ -166,7 +167,7 @@
   .dots {
     margin-top: 36px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
   .dot-card {
@@ -257,10 +258,6 @@
     font-size: 13px;
     color: rgba(244, 242, 239, 0.6);
     letter-spacing: 0.04em;
-  }
-
-  @media (max-width: 900px) {
-    .dots { grid-template-columns: repeat(3, 1fr); }
   }
 
   @media (max-width: 640px) {
@@ -405,6 +402,11 @@
         <div class="dot" style="background:var(--dot-books)"></div>
         <span class="name">liha books</span>
         <span class="hex">#E9B412</span>
+      </div>
+      <div class="dot-card">
+        <div class="dot" style="background:var(--dot-sori)"></div>
+        <span class="name">sori blocks</span>
+        <span class="hex">#F29E6D</span>
       </div>
       <div class="dot-card">
         <div class="dot" style="background:var(--dot-puddle)"></div>
